@@ -1,0 +1,18 @@
+.flash {
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flash-success {
+  color: white;
+  background-color: green;
+}
+.flash-info {
+  color: white;
+  background-color: orange;
+}
+.flash-error {
+  color: white;
+  background-color: red;
+}
