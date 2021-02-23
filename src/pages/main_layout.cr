@@ -18,7 +18,7 @@ abstract class MainLayout
       body do
         mount Layout::Header, current_user: current_user
         mount Shared::FlashMessages, context.flash
-        div class: "flex w-full root-container justify-center" do
+        div class: "flex w-full bg-gray-200 root-container justify-center" do
           div class: "xl:w-3/4 p-3 w-full" do
             content
           end
