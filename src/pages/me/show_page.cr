@@ -7,14 +7,13 @@ class Me::ShowPage < MainLayout
 
   private def helpful_tips
     div class: "p-3 bg-gray-300 rounded shadow" do
+      link to: ForumPost::New do
+        button "New post", class: "p-1 rounded shadow bg-blue-300 hover:bg-blue-500 text-white"
+      end
 
-    link to: ForumPost::New do
-      button "New post", class: "p-1 rounded shadow bg-blue-300 hover:bg-blue-500 text-white"
-    end
-
-    link to: ForumPost::Index do
-      button "All posts", class: "p-1 rounded shadow bg-blue-300 hover:bg-blue-500 text-white"
-    end
+      link to: ForumPost::Index do
+        button "All posts", class: "p-1 rounded shadow bg-blue-300 hover:bg-blue-500 text-white"
+      end
 
       ul do
         li { link_to_authentication_guides }

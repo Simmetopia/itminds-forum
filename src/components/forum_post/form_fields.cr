@@ -1,5 +1,6 @@
 class ForumPost::FormFields < BaseComponent
   needs op : SaveForumPost
+
   def render
     mount Shared::Field, op.title
     mount Shared::Field, op.content, &.textarea
