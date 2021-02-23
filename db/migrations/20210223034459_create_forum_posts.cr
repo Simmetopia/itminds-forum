@@ -1,0 +1,16 @@
+class CreateForumPosts::V20210223034459 < Avram::Migrator::Migration::V1
+  def migrate
+    # Learn about migrations at: https://luckyframework.org/guides/database/migrations
+    create table_for(ForumPost) do
+      primary_key id : Int64
+      add_timestamps
+      add title : String
+      add content : String
+      add_belongs_to author : User, on_delete: :nullify
+    end
+  end
+
+  def rollback
+    drop table_for(ForumPost)
+  end
+end
